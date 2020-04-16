@@ -1,0 +1,42 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+.updates {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+}
+.updates li {
+  margin: 1em;
+}
+.updates li img {
+  width: 100%;
+}
+.border-selected {
+  border-top: 1px solid #e91e63;
+}
+.border-selected-label {
+  padding: 2px;
+}
+.card .card-title {
+  font-size: 20px;
+}
+h4 {
+  font-family: 'Ubuntu', sans-serif;
+}
+.state-card {
+  font-family: 'Lato', sans-serif;
+}
+.ui-autocomplete-category {
+  font-weight: bold;
+  padding: .2em .4em;
+  margin: .8em 0 .2em;
+  line-height: 1.5;
+}
+ul.filters > li {
+  display: inline-block;
+  zoom: 1;
+  padding: 5px;
+}
