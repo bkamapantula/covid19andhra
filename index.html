@@ -3,14 +3,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
-  <meta content="covid-19 india, states response - BehanBox" name="description">
+  <meta content="covid-19 india, andhra pradesh relief camps - BehanBox" name="description">
   <meta property="og:title"       content="Covid-19 India Response">
-  <meta property="og:url"         content="http://covid19indiaresponse.behanbox.com/">
-  <meta propery="og:description"  content="India central, state government response to Covid-19 spread by BehanBox">
+  <meta property="og:url"         content="http://covid19andhra.behanbox.com/">
+  <meta propery="og:description"  content="Andhra Pradesh relief camps during Covid-19 spread by BehanBox">
   <meta property="og:type"        content="website">
-  <meta name="twitter:card"       content="India central, state government response to Covid-19 spread by BehanBox">
-  <meta name="twitter:site"       content="@behanbox">
-  <meta name="twitter:creator"    content="@behanbox">
+  <meta name="twitter:card"       content="Andhra Pradesh relief camps during  Covid-19 spread by BehanBox">
+  <meta name="twitter:site"       content="@suresh_ediga">
+  <meta name="twitter:creator"    content="@suresh_ediga">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="surge.sh" name="generator">
 
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"> -->
   <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
   <link rel="stylesheet" href="node_modules/jquery-ui/themes/base/all.css">
-  <title>Covid-19 Indian States Relief Measures</title>
+  <title>Covid-19 Andra Pradesh Relief Camps</title>
   <link rel="stylesheet" href="style.css">
 
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -29,10 +29,10 @@
   <script type="text/javascript" src="js/jquery-ui.js"></script>
   <script type="text/javascript" src="config.js"></script>
 
-  <!-- <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/combine/npm/jquery,npm/lodash,npm/g1"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -60,7 +60,7 @@
     <!-- navigation panel -->
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper teal">
+        <div class="nav-wrapper">
           <a href="#" class="brand-logo center"><%- config.toppanel.title %></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="hide-on-med-and-down">
@@ -75,39 +75,7 @@
       <%- config.cover %>
     </p>
     <div class="divider"></div>
-    <div class="row">
-      <div class="col s12 m1">
-        <!-- Dropdown Trigger -->
-        <a class='dropdown-trigger btn' href='#' data-target='lang-selector'><i class="material-icons">language</i></a>
-        <!-- Dropdown Structure -->
-        <ul id='lang-selector' class='dropdown-content'>
-          <li class="active"><a href="?lang=en" data-lang="en" class="lang urlfilter">English</a></li>
-          <li><a href="?lang=te" data-lang="te" class="lang urlfilter">తెలుగు</a></li>
-        </ul>
-      </div>
-      <div class="col s12 m8 center">
-        <ul class="filters">
-          <li>View by</li>
-          <% _.each(config.filters, function(item) { %>
-            <li><a href="?view=<%- item.text %>" class="urlfilter" data-label="<%- item.text %>"><%- item.text %>s</a></li>
-          <% }) %>
-        </ul>
-      </div>
-      <div class="col s12 m3">
-        <div class="row">
-          <div class="col s10 m10">
-            <input type="text"
-              class="form-control left" name="autocomplete" id="autocomplete" aria-describedby="helpId" placeholder="search for welfare, pds, food">
-          </div>
-          <div class="col s2 m2" style="padding-top: 10px;">
-            <a class="waves-effect waves-light btn right">
-              <i class="material-icons">refresh</i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="center">Viewing <span class="events-counter"></span>. Arranged by <a href="?arrange=state" class="urlfilter" data-arrange="state">State</a> | <a href="?arrange=date" class="urlfilter" data-arrange="date">Date</a> </p>
+    <p class="center">Viewing <span class="events-counter"></span>.</p>
   </script>
 
   <div id="updates">Loading updates...</div>
@@ -117,21 +85,13 @@
         <div class="row">
           <h4 id="<%- state.replace(' ', '_') %>"><%- state %></h4>
           <% _.each(vals, function(item, item_id) { %>
-            <div class="col s12 m4 state-card" data-labeltarget="<%- item.type %>" data-category="<%- item.misc %>">
-              <div class="card border-<%- item.type %>"
-                data-place="<%- item.location %>"
-                data-category="<%- item.category %>"
-                data-misc="<%- item.misc %>"
-                data-labeltarget="<%- item.type %>">
+            <div class="col s12 m4 state-card">
+              <div class="card border-<%- item.type %>">
                 <div class="card-content dark-text">
-                  <!-- <a href="?category=<%- item.misc %>" class="badge urlfilter right" target="#" data-category="<%- item.misc %>"><%- item.misc %></a> -->
-                  <span class="badge right" data-category="<%- item.misc %>"><%- item.misc %></span>
-                  <span class="card-title"><%- item.title %></span>
-                  <p><%- item.description %></p>
-                </div>
-                <div class="card-action">
-                  <a href="<%- item.source %>" target="_blank">Source</a>
-                  <div style="margin-bottom: 5px;" class="right"><%- _by === 'date' ? item.location : item.when %></div>
+                  <span class="card-title"><%- item['RELIEF CAMP ADDRESS'] %></span>
+                  <p>Name: <%- item['RELIEF OFFICER NAME'] %></p>
+                  <p>Designation: <%- item['RELIEF OFFICER DESIGNATION'] %></p>
+                  <p>Phone: <%- item['INCHARGE RELIEF OFFICER MOBILE'] %></p>
                 </div>
               </div>
             </div>
@@ -141,21 +101,21 @@
     </div>
   </script>
   <script src="js/script.js"></script>
-  <footer class="page-footer teal">
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About</h5>
           <p class="grey-text text-lighten-4">
-            All content is curated by BehanBox, Twitter users online. Content (titles, descriptions) are adapted/replicated from respective Sources (Newspapers, Digital Media, Tweets). Content is categorized for easy discovery purposes.
+            All content is curated by Suresh Ediga.
           </p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
-          <ul>
+          <!-- <ul>
             <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.behanbox.com/">BehanBox.com</a></li>
             <li><a class="grey-text text-lighten-3" target="_blank" href="https://twitter.com/behanbox">@BehanBox</a></li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>
